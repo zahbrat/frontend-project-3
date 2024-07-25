@@ -1,2 +1,3 @@
-@import './common';
-@import './example';
+@import 'util/variables';
+@import 'base/general.scss';
+@import 'components/game10', 'components/game7';

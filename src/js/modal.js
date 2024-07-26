@@ -19,3 +19,9 @@ backdrop.addEventListener('click', (e) => {
         toogleModal();
       }
 })
+
+document.addEventListener('keydown', (e) => {
+    if(e.code === 'Escape') {
+        toogleModal()
+    }
+})

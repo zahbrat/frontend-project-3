@@ -9,11 +9,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url(../images/icon/game-development.svg) 360px 70px / 30px
-      no-repeat,
-    url(../images/icon/puzzle.svg) 100px 150px / 30px no-repeat,
-    url(../images/icon/sword.svg) 50px 70px / 30px no-repeat,
-    url(../images/icon/tic-tac-toe.svg) 265px 150px / 30px no-repeat;
+  background-image: url(../images/icon/img_modal.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
 
   &__svg {
     stroke-width: 1px;
@@ -26,6 +25,7 @@
       background: $color-footerHover;
       transition: 0.5s;
       border-radius: 100%;
+      scale: 1.2;
       // width: 20px;
       // height: 20px;
     }

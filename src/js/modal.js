@@ -24,15 +24,20 @@ const toogleModal = () => {
     }
  })
 
-modalClose.addEventListener('click', toogleModal)
+modalClose.addEventListener('click', () => {
+    toogleModal()
+    input.value = ''
+})
 backdrop.addEventListener('click', (e) => {
     if (e.target === backdrop) {
         toogleModal();
+        input.value = ''
       }
 })
 
 document.addEventListener('keydown', (e) => {
     if(e.code === 'Escape') {
         toogleModal()
+        input.value = ''
     }
 })

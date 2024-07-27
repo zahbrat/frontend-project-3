@@ -1,24 +1,24 @@
-const modalClose = document.querySelector('[data-modal-close]')
-const backdrop = document.querySelector('.backdrop')
+const modalClose = document.querySelector('.modal-header__close')
+const backdropHeader = document.querySelector('.backdrop-header')
 
 console.log(modalClose);
-console.log(backdrop);
+console.log(backdropHeader);
 
 
 const toggleModal = () => {
-    backdrop.classList.toggle('is-hidden')
-  
+    backdropHeader.classList.toggle('is-hidden')
+
 }
 
 
-modalClose.addEventListener('click', () =>{
+modalClose.addEventListener('click', () => {
     console.log('click');
     toggleModal()
 })
 
 
-backdrop.addEventListener('click', (e) => {
-    if (e.target === backdrop) {
+backdropHeader.addEventListener('click', (e) => {
+    if (e.target === backdropHeader) {
         toggleModal();
     }
 });

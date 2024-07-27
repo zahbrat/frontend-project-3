@@ -75,3 +75,10 @@
     gap: 18px;
   }
 }
+
+.is-hidden {
+  /* display: none; */
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}

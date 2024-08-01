@@ -1,0 +1,72 @@
+.game6 {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    &__stage {
+        transition: 0.25s;
+        width: 70%;
+        height: 190px;
+        border-radius: 15px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+
+        &:focus {
+            transition: 0.25s;
+            outline: 5px solid #000;
+        }
+    }
+
+    &__play {
+        transition: 0.5s opacity;
+        position: absolute;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        background: $grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__onground {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    &__dino {
+        transition: .5s bottom;
+        width: 50px;
+        left: 15%;
+        z-index: 3;
+    }
+
+    &__ground {
+        display: inline-flex;
+
+        img {
+            transition: translate 1.5s;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+
+    }
+
+    &__cactus {
+        img {
+            left: -100%;
+        }
+
+        &__sprite {
+            display: block;
+        }
+    }
+
+    // &__sprite-template {
+    //     display: none;
+    // }
+}

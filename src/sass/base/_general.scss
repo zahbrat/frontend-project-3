@@ -32,6 +32,10 @@
 
 }
 
+img::selection {
+    background: $skyblue;
+}
+
 body {
     background-color: $grey;
     background-image: url(.././images/bg.svg);
@@ -40,7 +44,8 @@ body {
 
     margin: 0 3px;
 
-    .page {
+    .container {
+        min-height: 100vh;
         width: 75.69%;
         padding: 0 91px;
         background: white;
@@ -60,6 +65,7 @@ body {
             }
 
             .btn {
+                transition: 0.5s;
                 cursor: pointer;
                 border-radius: 20px;
                 padding: 10px 20px;
@@ -72,6 +78,12 @@ body {
                     transition: 0.5s;
                     background: $skyblue;
                     color: black;
+                }
+
+                &:active {
+                    transition: 0.1s;
+                    box-shadow: none;
+                    border: 2px solid #000;
                 }
             }
         }

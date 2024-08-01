@@ -1,36 +1,134 @@
+let speed = 5;
+let score = 0;
+
+const stageDOM = document.querySelector('.game6__stage');
+const sprites = {
+  dino: {
+    isJumping: false,
+    dom: document.querySelector('.game6__dino'),
+  },
+  ground: {
+    width: 481,
+    offsets: [],
+    dom: Array.from(document.querySelectorAll('.game6__ground *')),
+  },
+  cactuses: {
+    dom: document.querySelector('.game6__cactuses'),
+    width: 37,
+    clones: [],
+  },
+};
+
+stageDOM.querySelector('.btn').onclick = () => {
+  stageDOM.querySelector('.game6__play').opacity = 0;
+  detectEvents();
+  animateWorld();
+};
+
+const detectEvents = function () {
+  const handleJump = e => {
+    const isJumpKey = e.code === 'Space' || e.code === 'ArrowUp';
+    const { dino } = sprites;
+
+    if (
+      ((e.type === 'keydown' && isJumpKey) || e.type === 'mousedown') &&
+      !dino.isJumping
+    ) {
+      const {
+        dom: { style },
+      } = dino;
+
+      e.preventDefault();
+
+      dino.isJumping = true;
+      style.bottom = '80%';
+
+      setTimeout(() => {
+        style.bottom = '';
+        dino.isJumping = false;
+      }, 250); // Тривалість стрибка
+    }
+  };
+
+  stageDOM.addEventListener('focus', () => {
+    stageDOM.addEventListener('keydown', handleJump);
+    stageDOM.addEventListener('mousedown', handleJump);
+  });
+
+  stageDOM.addEventListener('blur', () => {
+    stageDOM.removeEventListener('keydown', handleJump);
+    stageDOM.removeEventListener('mousedown', handleJump);
+  });
+};
+
+const animateWorld = function () {
+  const { ground, cactuses } = sprites;
+
+  ground.dom.forEach((domElement, index) => {
+    domElement.style.left = index === 0 ? ground.width + 'px' : '0px';
+    ground.offsets.push(parseFloat(domElement.style.left));
+  });
+
+  const startMove = () => {
+    ground.offsets = ground.offsets.map(offset => offset - speed);
+
+    ground.dom.forEach((domElement, index) => {
+      const offset = ground.offsets[index];
+      domElement.style.left = `${offset}px`;
+
+      if (offset <= -ground.width) {
+        ground.offsets[index] = ground.width * (ground.dom.length - 1);
+      }
+    });
+
+    cactuses.clones.forEach((clone, index) => {
+      clone.offset -= speed;
+      clone.dom.style.left = `${clone.offset}px`;
+
+      if (clone.offset <= -cactuses.width) {
+        cactuses.dom.removeChild(clone.dom);
+        cactuses.clones.splice(index, 1);
+      }
+    });
+
+    if (
+      cactuses.clones.length === 0 ||
+      cactuses.clones[cactuses.clones.length - 1].offset < ground.width - 200
+    ) {
+      let newCactus = document.createElement('img');
+      newCactus.src = new URL('../images/cactus.png', import.meta.url);
+      newCactus.classList.add('game6__sprite', 'game6__onground');
+      newCactus.alt = 'cactus';
+
+      cactuses.clones.push({
+        id: cactuses.clones.length,
+        offset: ground.width + (Math.random() / 4) * ground.width,
+        dom: newCactus,
+      });
+
+      cactuses.dom.appendChild(newCactus);
+    }
+
+    requestAnimationFrame(startMove);
+  };
+
+  startMove();
+};
+
 // football
 (() => {
   const stage = document.querySelector('.game7__stage');
   const ball = stage.querySelector('.game7__ball');
-  const cursor = stage.querySelector('.game7__cursor');
-
-  stage.addEventListener('mousemove', e => {
-    e.preventDefault();
-
-    const size = stage.getBoundingClientRect();
-    let left = e.clientX - size.left - 10;
-    let top = e.clientY - size.top - 10;
-
-    if (left < 0) {
-      left = 0;
-    } else if (left > size.width - cursor.clientWidth) {
-      left = size.width - cursor.clientWidth;
-    }
-
-    if (top < 0) {
-      top = 0;
-    } else if (top > size.height - cursor.clientHeight) {
-      top = size.height - cursor.clientHeight;
-    }
-
-    cursor.style.left = `${left}px`;
-    cursor.style.top = `${top}px`;
-  });
 
   stage.addEventListener('click', e => {
     e.preventDefault();
 
     const size = stage.getBoundingClientRect();
+    // const soundURL = new URL('~src/audio/game7-hit.waw', import.meta.url);
+    // const sound = new Audio(soundURL);
+    // console.log(sound);
+    // console.log(import.meta.url);
+
     let left = e.clientX - size.left - 25;
     let top = e.clientY - size.top - 25;
 

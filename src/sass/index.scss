@@ -1,2 +1,26 @@
+@import 'utils/variables';
 @import './common';
 @import './example';
+
+
+//base
+@import 'base/common';
+@import 'base/fonts';
+@import 'base/general';
+@import 'base/normalize';
+@import 'base/reset';
+
+//utils
+
+@import 'utils/base';
+@import 'utils/colors';
+@import 'utils/mixins';
+@import 'utils/placeholder';
+
+
+//components
+
+@import 'components/check-year';
+
+
+

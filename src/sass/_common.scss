@@ -1,1 +1,25 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+
+//base
+@import 'base/common';
+@import 'base/fonts';
+@import 'base/general';
+@import 'base/normalize';
+@import 'base/reset';
+
+//utils
+
+@import 'utils/base';
+@import 'utils/colors';
+@import 'utils/mixins';
+@import 'utils/placeholder';
+@import 'utils/variables';
+
+//components
+
+@import 'components/check-year';
+
+
+
+

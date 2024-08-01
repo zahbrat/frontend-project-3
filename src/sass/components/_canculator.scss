@@ -1,3 +1,7 @@
+.isActive {
+  box-shadow: $color-footerHover
+}
+
 .canculator {
   &__wrapper  {
     display: flex;
@@ -92,54 +96,12 @@
       align-content: space-between;
     }
 
-    &--btn1 {
+    &--btn {
       box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
       background: $color-footerTextNav;
       border-radius: 20px;
       padding: 5px 10px;
       width: 27px;
-      height: 25px;
-      font-weight: 400;
-      font-size: 12px;
-      color: $color-footer;
-      border: none;
-      cursor: pointer;
-    }
-
-    &--btn2 {
-      box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
-      background: $color-footerTextNav;
-      border-radius: 20px;
-      padding: 5px 10px;
-      width: 25px;
-      height: 25px;
-      font-weight: 400;
-      font-size: 12px;
-      color: $color-footer;
-      border: none;
-      cursor: pointer;
-    }
-
-    &--btn3 {
-      box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
-      background: $color-footerTextNav;
-      border-radius: 20px;
-      padding: 5px 10px;
-      width: 25px;
-      height: 25px;
-      font-weight: 400;
-      font-size: 12px;
-      color: $color-footer;
-      border: none;
-      cursor: pointer;
-    }
-
-    &--btn4 {
-      box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
-      background: $color-footerTextNav;
-      border-radius: 20px;
-      padding: 5px 10px;
-      width: 25px;
       height: 25px;
       font-weight: 400;
       font-size: 12px;

@@ -1,0 +1,30 @@
+.guess-number{
+    &__hr{
+        background-color: $color-footerTextNav;
+    }
+&__title{
+    font-weight: 400;
+font-size: 16px;
+color: $color-footerTextNav;
+}
+
+&__input{
+    width: 150px;
+height: 35px;
+box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+padding: 10px 45px 10px 10px;
+background-color: $color-footerInput;
+outline: none;
+
+}
+&__btn{
+    border-radius: 0 20px 20px 0;
+    background-color: $black;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    left: -33px;
+margin: 0;
+}
+}

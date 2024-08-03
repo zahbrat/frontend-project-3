@@ -1,0 +1,38 @@
+.header {
+  padding: 21px 0 21px 0;
+  &__item {
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+  }
+  &__interakt {
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  &__theme {
+  }
+  &__switch-wrapper {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 11px;
+    width: 40px;
+    height: 20px;
+    background: #7a7a7a;
+    input {
+      display: none;
+      &:input:checked+.header__round::before {
+        content: '';
+        background-image: url(../images/header/moon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-color: #000;
+      }
+    }
+  }
+}

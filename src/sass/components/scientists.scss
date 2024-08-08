@@ -1,4 +1,5 @@
-.game10__cards {
+.scientists__cards {
+    height: 508px;
     width: 65%;
     margin: 0 auto;
     display: flex;
@@ -9,7 +10,7 @@
     margin-bottom: 36px;
 }
 
-.game10__item {
+.scientists__item {
     width: 100px;
     height: 100px;
     border-radius: 20px;
@@ -28,7 +29,7 @@
     }
 }
 
-.game10__sort {
+.scientists__sort {
     display: flex;
     width: 82%;
     margin: 0 auto;

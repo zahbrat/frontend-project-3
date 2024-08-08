@@ -1,4 +1,4 @@
-.game6 {
+.dino {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -13,14 +13,16 @@
         overflow: hidden;
         position: relative;
 
-        &:focus {
-            transition: 0.25s;
-            outline: 5px solid #000;
-        }
     }
 
-    &__play {
-        transition: 0.5s opacity;
+    &__stage:focus,
+    &__stage-focus {
+        transition: 0.25s;
+        outline: 5px solid #000;
+    }
+
+    &__cover {
+        transition: 0.5s display;
         position: absolute;
         z-index: 1000;
         width: 100%;
@@ -29,6 +31,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    &__end {
+        display: flex;
+        flex-direction: column;
+
+        gap: p {
+            font-size: 24px;
+
+        }
     }
 
     &__onground {

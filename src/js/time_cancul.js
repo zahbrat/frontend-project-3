@@ -16,6 +16,7 @@ let minutes = +inputTime.value
     return 'Помилка, перевірте дані';
   }
 
+
   let days = Math.floor(minutes / 1440)
   minutes %= 1440
   let hour = Math.floor(minutes / 60);

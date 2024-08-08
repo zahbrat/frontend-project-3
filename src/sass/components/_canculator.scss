@@ -1,5 +1,5 @@
 .canculator {
-  &__wrapper  {
+  &__wrapper {
     display: flex;
     justify-content: center;
     margin-top: 36px;
@@ -11,7 +11,7 @@
     text-align: center;
     color: $color-footerTextNav;
     margin-bottom: 0;
-    margin-top: 36px;
+    margin: 0;
   }
   &__secondwrapp {
     display: flex;

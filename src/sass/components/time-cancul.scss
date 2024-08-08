@@ -1,13 +1,14 @@
 .time {
   &__hr {
     stroke-width: 1px;
-stroke: $color-footerTextNav;
-width: 536px;
-margin-top: 36px;
-margin-bottom: 36px;
+    stroke: $color-footerTextNav;
+    width: 536px;
+    margin-top: 36px;
+    margin-bottom: 36px;
   }
   &__days {
     margin-left: 33px;
+    width: 105px;
   }
   &__generalWrapp {
     display: flex;

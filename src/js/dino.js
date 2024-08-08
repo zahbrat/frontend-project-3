@@ -1,5 +1,6 @@
 const dino = () => {
   let speed = 3;
+  let score;
   let animationFrameId = null;
 
   const stageDOM = document.querySelector('.dino__stage');
@@ -16,7 +17,7 @@ const dino = () => {
     },
     cactuses: {
       dom: document.querySelector('.dino__cactuses'),
-      width: 37,
+      width: 33,
       clones: [],
     },
   };
@@ -50,7 +51,7 @@ const dino = () => {
           'transitionend',
           () => (dino.isJumping = false)
         );
-      }, 250); // Duration of the jump
+      }, 400); // Duration of the jump
     }
   };
 
@@ -127,16 +128,22 @@ const dino = () => {
 
         cactuses.clones.push({
           id: cactuses.clones.length,
-          offset: ground.width + (Math.random() / 4) * ground.width,
+          offset: ground.width + Math.random() * (ground.width / 8),
           dom: newCactus,
         });
 
         cactuses.dom.appendChild(newCactus);
       }
 
+      score++;
+      stageDOM.querySelector('.dino__score span').textContent = score;
+
       animationFrameId = requestAnimationFrame(startMove);
 
-      console.log(checkCollision()); // Перевірка колізії на кожному кадрі
+      if (checkCollision()) {
+        stageDOM.querySelector('.dino__end').style.display = '';
+        stopAnimation();
+      }
     };
 
     startMove();
@@ -149,15 +156,41 @@ const dino = () => {
     }
   };
 
-  window.addEventListener('beforeunload', stopAnimation);
-
-  stageDOM.querySelector('.btn').addEventListener('click', () => {
+  const startGame = () => {
+    // Скидаємо стан гри
     stageDOM.querySelector('.dino__play').style.display = 'none';
+    stageDOM.querySelector('.dino__end').style.display = 'none';
+
+    sprites.dino.isJumping = false;
+    sprites.dino.isTouchingCactus = false;
+
+    document.querySelector('.dino__cactuses').textContent = '';
+    sprites.cactuses.clones = [];
+
+    score = 0;
+
+    sprites.ground.dom.forEach((domElement, index) => {
+      domElement.style.left = index === 0 ? sprites.ground.width + 'px' : '0px';
+      sprites.ground.offsets[index] = parseFloat(domElement.style.left);
+    });
+
     stageDOM.setAttribute('tabindex', '0');
     stageDOM.focus();
 
     animateWorld();
-  });
+  };
+
+  window.addEventListener('beforeunload', stopAnimation);
+
+  stageDOM
+    .querySelector('.dino__play .btn')
+    .addEventListener('click', startGame);
+  stageDOM
+    .querySelector('.dino__end .btn')
+    .addEventListener('click', startGame);
+
+  // Сховуємо екран завершення гри при завантаженні
+  stageDOM.querySelector('.dino__end').style.display = 'none';
 };
 
 dino();

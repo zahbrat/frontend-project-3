@@ -2,6 +2,11 @@
   box-shadow: $color-footerHover
 }
 
+
+.active {
+  box-shadow: $color-footerHover;
+}
+
 .canculator {
   &__wrapper  {
     display: flex;
@@ -16,6 +21,7 @@
     color: $color-footerTextNav;
     margin-bottom: 0;
     margin-top: 36px;
+    margin: 0;
   }
   &__secondwrapp {
     display: flex;

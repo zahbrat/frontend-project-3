@@ -4,6 +4,11 @@ const resultMy = document.querySelector('.canculator__secondwrapp--input3');
 const btns = document.querySelectorAll('.canculator__firstwrapp--btn');
 const equalBtn = document.querySelector('.canculator__secondwrapp--btn')
 
+// const btn = document.querySelector('.canculator__firstwrapp--btn')
+// btns.addEventListener('click', () => {
+//     this.classlist.add('active');
+// })
+
 let btnOperation = 0
 let firstValue = 0
 let secondValue = 0

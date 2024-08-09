@@ -1,11 +1,3 @@
-.isActive {
-  box-shadow: $color-footerHover
-}
-
-
-.active {
-  box-shadow: $color-footerHover;
-}
 
 .canculator {
   &__wrapper  {
@@ -39,6 +31,9 @@
       height: 25px;
       border: none;
       cursor: pointer;
+      &:hover {
+        box-shadow: 3px 3px 10px 0 $color-footerHover;
+      }
     }
 
     &--input2 {
@@ -116,4 +111,8 @@
       cursor: pointer;
     }
   }
+}
+
+.isActive {
+  box-shadow: 3px 3px 10px 0 $color-footerHover;
 }

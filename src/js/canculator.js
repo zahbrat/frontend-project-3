@@ -3,11 +3,15 @@ const input2 = document.querySelector('.canculator__secondwrapp--input2');
 const resultMy = document.querySelector('.canculator__secondwrapp--input3');
 const btns = document.querySelectorAll('.canculator__firstwrapp--btn');
 const equalBtn = document.querySelector('.canculator__secondwrapp--btn')
+const allCanculator = document.querySelector('.canculator__firstwrapp')
 
-// const btn = document.querySelector('.canculator__firstwrapp--btn')
-// btns.addEventListener('click', () => {
-//     this.classlist.add('active');
-// })
+btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btns.forEach(btn => btn.classList.remove('isActive'))
+        btn.classList.toggle('isActive');
+    })
+})
+
 
 let btnOperation = 0
 let firstValue = 0
@@ -44,6 +48,8 @@ const canculatorNum = () => {
     }
 
     resultMy.textContent = result;
+
+
 }
 
 btns.forEach(btn => {
@@ -55,3 +61,9 @@ btns.forEach(btn => {
 
 equalBtn.addEventListener('click', canculatorNum);
 
+// body.addEventListener('change', () => {
+//     input1.value = '';
+//     input2.value = '';
+//     resultMy.textContent = '';
+//     btns.forEach(btn => btn.classList.remove('isActive'))
+// })

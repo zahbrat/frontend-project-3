@@ -119,11 +119,13 @@ const dino = () => {
 
       if (
         cactuses.clones.length === 0 ||
-        cactuses.clones[cactuses.clones.length - 1].offset < ground.width - 200
+        cactuses.clones[cactuses.clones.length - 1].offset <
+          ground.width - (Math.floor(Math.random() * 300) + 150)
       ) {
         let newCactus = document.createElement('img');
         newCactus.src = new URL('../images/cactus.png', import.meta.url);
         newCactus.classList.add('dino__sprite', 'dino__onground');
+        newCactus.style.width = Math.floor(Math.random() * 20) + 10 + 'px';
         newCactus.alt = 'cactus';
 
         cactuses.clones.push({

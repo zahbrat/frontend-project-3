@@ -30,8 +30,9 @@
         font-weight: bold;
         font-size: 14px;
 
-        * {
+        &-js {
             font-size: 14px;
+            background: $skyblue;
         }
     }
 
@@ -45,6 +46,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 5%;
     }
 
     &__end {
@@ -80,7 +82,7 @@
         display: inline-flex;
 
         img {
-            transition: translate 1.5s;
+            transition: translate 2s;
             position: absolute;
             width: 100%;
             bottom: 0;
@@ -92,7 +94,6 @@
     &__cactuses {
         img {
             left: -100%;
-            width: 20px;
         }
 
         &__sprite {

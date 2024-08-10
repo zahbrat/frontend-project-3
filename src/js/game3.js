@@ -12,6 +12,11 @@ gameChoiceBtns.forEach(btn => {
   });
 });
 
+console.log(gameChoiceBtns);
+console.log(Array.from(gameChoiceBtns));
+const example = Array.from(gameChoiceBtns).find(btn => btn.dataset.choice === 'камінь');
+console.log(example);
+
 const playGame = function (userChoice) {
   const choices = ['камінь', 'ножиці', 'папір'];
   const computerChoice = choices[Math.floor(Math.random() * 3)];
@@ -19,11 +24,16 @@ const playGame = function (userChoice) {
   let result = '';
   switch (computerChoice) {
     case 'камінь':
-      let findButton = gameChoiceBtns.find(
-        computerChoice => computerChoice.dataset.choice === 'камінь'
-      );
+      let findButton = Array.from(gameChoiceBtns).find(btn => btn.dataset.choice === 'камінь');
+      ;
       console.log(findButton);
       findButton.style.boxShadow = '1px 1px 10px red';
+      break;
+      case 'ножиці':
+        let findButton2 = Array.from(gameChoiceBtns).find(btn => btn.dataset.choice === 'ножиці');
+      ;
+      console.log(findButton2);
+      findButton2.style.boxShadow = '1px 1px 10px red';
       break;
   }
   if (

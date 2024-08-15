@@ -1,0 +1,41 @@
+body {
+  font-family: 'Montserrat Alternates';
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input {
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1090px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $color-footer;
+}
+
+::selection {
+  background-color: $color-footerHover;
+}

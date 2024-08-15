@@ -1,13 +1,7 @@
-const numInput = document.querySelector('.num__wrapper--input');
+const numInput = document.querySelectorAll('.num__wrapper--input');
 const numWrapper = document.querySelector('.num__wrapper');
 const numResult = document.querySelector('.num__subtitle');
 
-// numWrapper.forEach(input => {
-//     input.addEventListener('click', () => {
-//         numWrapper.forEach(input => input.classList.remove('isActive'))
-//         input.classList.toggle('isActive');
-//     })
-// })
 
 // for (let i = 0; i < numInput.length; i++) {
 //   numInput[i].addEventListener('input', () => {
@@ -16,12 +10,26 @@ const numResult = document.querySelector('.num__subtitle');
 //   });
 // }
 
-numWrapper.forEach(input => {
-  maxNumber = Math.max(input.value);
-//   return maxNumber;
-  numResult.textContent = `Найбільше число, яке ви ввели - (${maxNumber})`;
+const arrayNum = [];
+numInput.forEach(input => {
+  input.addEventListener('input', () => {
+    arrayNum.length = 0;
+    numInput.forEach(input => {
+
+      const num = +input.value
+      if(!isNaN(num)) {
+        arrayNum.push(num);
+      }
+    });
+    if(arrayNum.length > 0) {
+      const maxNumber = Math.max(...arrayNum);
+      numResult.textContent = `Найбільше число, яке ви ввели - (${maxNumber})`;
+    } else {
+      numResult.textContent = "Введіть коректні числа";
+    }
+  }) 
 });
-// console.log(maxNumber);
+
 
 // numWrapper.forEach(input => {
 //     let maxNUmber = Math.max(input.map(Number))

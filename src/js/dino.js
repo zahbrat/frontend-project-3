@@ -125,7 +125,7 @@ const dino = () => {
         let newCactus = document.createElement('img');
         newCactus.src = new URL('../images/cactus.png', import.meta.url);
         newCactus.classList.add('dino__sprite', 'dino__onground');
-        newCactus.style.width = Math.floor(Math.random() * 20) + 10 + 'px';
+        newCactus.style.width = Math.floor(Math.random() * 15) + 10 + 'px';
         newCactus.alt = 'cactus';
 
         cactuses.clones.push({
@@ -155,11 +155,15 @@ const dino = () => {
     if (animationFrameId) {
       cancelAnimationFrame(animationFrameId);
       animationFrameId = null;
+
+      stageDOM.removeEventListener('keydown', handleJump);
+      stageDOM.removeEventListener('mousedown', handleJump);
     }
   };
 
   const startGame = () => {
-    // Скидаємо стан гри
+    stopAnimation();
+
     stageDOM.querySelector('.dino__play').style.display = 'none';
     stageDOM.querySelector('.dino__end').style.display = 'none';
 

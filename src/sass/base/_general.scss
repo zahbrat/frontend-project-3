@@ -1,103 +1,104 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    list-style-type: none;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 12px;
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
 
-    ::selection {
-        background: black;
-        color: $skyblue;
-    }
-
-    ::-webkit-scrollbar {
-        width: 15px;
-
-        &-track {
-            background: black
+        ::selection {
+            background: black;
+            color: $skyblue;
         }
 
-        &-thumb {
-            background: $skyblue;
-            border: 2.5px solid black;
+        ::-webkit-scrollbar {
+            width: 15px;
 
-            &:hover {
-                background: $grey;
-            }
-        }
-    }
-
-}
-
-img::selection {
-    background: $skyblue;
-}
-
-body {
-    background-color: $grey;
-    background-image: url(.././images/bg.svg);
-    background-size: cover;
-    background-repeat: repeat-y;
-
-    margin: 0 3px;
-
-    .container {
-        min-height: 100vh;
-        width: 75.69%;
-        padding: 0 91px;
-        background: white;
-        margin: 0 auto;
-        animation: pageAnim 1.2s 10ms ease-in-out;
-
-        section {
-            border-top: 1px solid black !important;
-            padding: 42px 0;
-            text-align: center;
-
-            .title {
-                font-family: "Montserrat Alternates", sans-serif;
-                font-weight: 500;
-                font-size: 16px;
-                margin-bottom: 40px;
+            &-track {
+                background: black
             }
 
-            .btn {
-                transition: 0.5s;
-                cursor: pointer;
-                border-radius: 20px;
-                padding: 10px 20px;
-                min-height: 35px;
-                box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
-                background: #000;
-                color: white;
+            &-thumb {
+                background: $skyblue;
+                border: 2.5px solid black;
 
                 &:hover {
-                    transition: 0.5s;
-                    background: $skyblue;
-                    color: black;
+                    background: $grey;
+                }
+            }
+        }
+
+    }
+
+    img::selection {
+        background: $skyblue;
+    }
+
+    body {
+        background-color: $grey;
+        background-image: url(.././images/bg.svg);
+        background-size: cover;
+        background-repeat: repeat-y;
+
+        margin: 0 3px;
+
+        .container {
+            min-height: 100vh;
+            width: 75.69%;
+            padding: 0 91px;
+            background: white;
+            margin: 0 auto;
+            animation: pageAnim 1.2s 10ms ease-in-out;
+
+            section {
+                border-top: 1px solid black !important;
+                padding: 42px 0;
+                text-align: center;
+
+                .title {
+                    font-family: "Montserrat Alternates", sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    margin-bottom: 40px;
                 }
 
-                &:active {
-                    transition: 0.1s;
-                    box-shadow: none;
-                    border: 2px solid #000;
+                .btn {
+                    transition: 0.5s;
+                    cursor: pointer;
+                    border-radius: 20px;
+                    padding: 10px 20px;
+                    min-height: 35px;
+                    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+                    background: #000;
+                    color: white;
+
+                    &:hover {
+                        transition: 0.5s;
+                        background: $skyblue;
+                        color: black;
+                    }
+
+                    &:active {
+                        transition: 0.1s;
+                        box-shadow: none;
+                        border: 2px solid #000;
+                    }
                 }
             }
         }
     }
-}
 
-@keyframes pageAnim {
-    0% {
-        transform: translateY(-300px);
-        opacity: 0;
-    }
+    @keyframes pageAnim {
+        0% {
+            transform: translateY(-300px);
+            opacity: 0;
+        }
 
-    100% {
-        transform: translateY(0);
-        opacity: 1;
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 }

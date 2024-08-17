@@ -1,0 +1,2 @@
+const e=document.querySelectorAll(".num__wrapper--input"),t=(document.querySelector(".num__wrapper"),document.querySelector(".num__subtitle")),n=[];e.forEach((u=>{u.addEventListener("input",(()=>{if(n.length=0,e.forEach((e=>{const t=+e.value;isNaN(t)||n.push(t)})),n.length>0){const e=Math.max(...n);t.textContent=`Найбільше число, яке ви ввели - (${e})`}else t.textContent="Введіть коректні числа"}))}));
+//# sourceMappingURL=index.5f060c7f.js.map

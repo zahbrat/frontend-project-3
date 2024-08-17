@@ -1,0 +1,46 @@
+.num {
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-footerTextNav;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 481px;
+    margin: 0 auto;
+
+    &--input {
+      border-radius: 20px;
+      padding: 10px 20px;
+      width: 135px;
+      height: 35px;
+      box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
+      background: $color-footerInput;
+      font-weight: 400;
+      font-size: 12px;
+      color: $color-footerInputText;
+      border: none;
+      text-align: center;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: $color-footerTextNav;
+    text-align: center;
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+
+  &__hr {
+    stroke-width: 1px;
+    stroke: $color-footerTextNav;
+    width: 536px;
+  }
+}

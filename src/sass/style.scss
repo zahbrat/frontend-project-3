@@ -7,7 +7,9 @@
 //base
 @import './base/general';
 @import './base/normalize';
+@import './base/fonts';
 
 
 //components
-@import './components/canculator';
+@import './components/max_num.scss';
+@import './components/modal-header.scss';

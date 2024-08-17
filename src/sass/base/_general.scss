@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Montserrat Alternates';
 }
@@ -28,6 +29,7 @@ li {
 a {
   text-decoration: none;
 }
+ 
 
 .container {
   max-width: 1090px;
@@ -36,35 +38,10 @@ a {
   background-color: $color-footer;
 }
 
-body {
-  background-color: #d9d9d9;
-  background-image: url(../images/img/background.png);
-  background-size: cover;
-  background-repeat: repeat-y;
-
-  margin: 0 3px;
+::selection {
+  background-color: $color-footerHover;
 }
 
-.page {
-  width: 75.69%;
-  padding: 0 91px;
-  background: white;
-  margin: 0 auto;
-  // animation: pageAnim 1.2s 10ms ease-in-out;
-  height: 100vh;
-}
-
-// @keyframes pageAnim {
-//   0% {
-//       transform: translateY(-300px);
-//       opacity: 0;
-//   }
-
-//   100% {
-//       transform: translateY(0);
-//       opacity: 1;
-//   }
-// }
 
 input {
   outline: none;

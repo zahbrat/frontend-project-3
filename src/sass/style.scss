@@ -1,3 +1,5 @@
+@import './base/fonts';
+
 //utils
 @import './utils/colors';
 
@@ -9,6 +11,5 @@
 
 
 //components
-@import './components/footer';
-@import './components/modal';
-@import './components/modal-header.scss'
+@import './components/max_num.scss';
+@import './components/modal-header.scss';

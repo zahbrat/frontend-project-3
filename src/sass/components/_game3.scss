@@ -1,0 +1,74 @@
+.game3 {
+    &__title {
+      font-weight: 400;
+      font-size: 16px;
+      color: $color-footerTextNav;
+      text-align: center;
+      padding: 0 0 36px 0;
+      margin: 0;
+    }
+    &__box {
+      display: flex;
+      gap: 38px;
+      justify-content: center;
+  
+      &--btn {
+        display: flex;
+        justify-content: center;
+        padding: 36px 0 36px 0;
+      }
+    }
+  
+    &__box-result {
+      display: flex;
+      flex-direction: column;
+    }
+    &__wrapper {
+      display: flex;
+      gap: 166px;
+      padding-bottom: 36px;
+      justify-content: center;
+      margin-left: 25%;
+    }
+    &__btn {
+      border-radius: 20px;
+      padding: 10px 20px;
+      // width: 182px;
+      height: 35px;
+      background-color: $color-footerTextNav;
+      font-weight: 400;
+      font-size: 12px;
+      color: $color-footer;
+      &:hover{
+        border: $color-footer;
+        transition: 0.5s;
+    }
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 12px;
+      color: $color-footerTextNav;
+    }
+    &__hr{
+      background-color: $color-footerTextNav;
+      height: 2px;
+      width: 536px;
+    }
+    &__choice{
+        border-radius: 20px;
+        padding: 10px;
+        width: 60px;
+        height: 60px;
+        background-color: $color-footerTextNav; 
+        &:hover{
+            border: $color-footer;
+            transition: 0.5s;
+        }
+    }
+    &__result {
+      font-weight: 400;
+      font-size: 12px;
+      text-align: center;
+    }
+
+  }

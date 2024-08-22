@@ -1,26 +1,19 @@
-@import 'utils/variables';
+@import './base/fonts';
+@import './base/normalize';
+@import './utils/colors';
 @import './common';
-@import './example';
+@import './sections/header';
+// @import 'util/variables';
+@import './components/game3';
 
 
-//base
-@import 'base/common';
-@import 'base/fonts';
-@import 'base/general';
-@import 'base/normalize';
-@import 'base/reset';
-
-//utils
-
-@import 'utils/base';
-@import 'utils/colors';
-@import 'utils/mixins';
-@import 'utils/placeholder';
-
-
-//components
-
-@import 'components/check-year';
-
-
-
+@import './sections/footer';
+@import './components/modal';
+@import './components/modal-header';
+@import './components/max_num';
+@import './components/canculator';
+@import 'base/general.scss';
+@import './components/dino';
+@import './components/scientists';
+@import './components/football';
+@import './components/our-team';

@@ -1,25 +1,17 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
-
-
-//base
-@import 'base/common';
-@import 'base/fonts';
-@import 'base/general';
-@import 'base/normalize';
-@import 'base/reset';
-
-//utils
-
-@import 'utils/base';
-@import 'utils/colors';
-@import 'utils/mixins';
-@import 'utils/placeholder';
-@import 'utils/variables';
-
-//components
-
-@import 'components/check-year';
-
-
-
-
+.container {
+  max-width: 1090px;
+  margin: 0 auto;
+  width: 100%; 
+}
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}

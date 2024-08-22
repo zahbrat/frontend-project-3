@@ -1,0 +1,58 @@
+.modal {
+  padding: 69px 42px 70px 43px;
+  width: 463px;
+  height: 245px;
+  background-color: #fff;
+  font-family: Inter;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/icon/img_modal.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  &__svg {
+    stroke-width: 1px;
+    stroke: $color-footerTextNav;
+    position: relative;
+    bottom: 50px;
+    left: 384px;
+
+    &:hover {
+      background: $color-footerHover;
+      transition: 0.5s;
+      border-radius: 100%;
+      scale: 1.2;
+      // width: 20px;
+      // height: 20px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: $color-footerTextNav;
+  }
+}
+
+
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* opacity: 1; */
+  transition: 0.5s;
+  z-index: 100;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

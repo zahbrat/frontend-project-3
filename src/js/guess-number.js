@@ -4,10 +4,17 @@ const guessNumber = function () {
   const numberToGuess = Math.floor(Math.random() * 10) + 1;
   const userGuess = parseInt(document.getElementById('guess').value);
   let result = '';
-  if (userGuess > 10 || userGuess <= 0) {
+
+  if (isNaN(userGuess)) {
+    result = 'Будь ласка, введіть коректне число.';
+    text.style.color = '#8ACECF';
+  } 
+
+   else if (userGuess > 10 || userGuess <= 0) {
     result = 'Будь ласка, введіть число в діапазоні від 1 до 10.';
     text.style.color = 'black';
   }
+
   // return;
   else if (userGuess === numberToGuess) {
     result = `Вітаю, ви вгадали число ${numberToGuess}!`;

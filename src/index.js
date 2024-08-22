@@ -10,9 +10,9 @@ btnOpenInterakt.addEventListener('click', () => {
 
 // let root = document.querySelector(":root");
 // let span = document.querySelector("slider round");
-const switchtheme = document.getElementById("theme-switch")
+// const switchtheme = document.getElementById("theme-switch")
 
-switchtheme.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  console.log('changetheme');
-})
+// switchtheme.addEventListener('click', () => {
+//   document.body.classList.toggle('dark');
+//   console.log('changetheme');
+// })

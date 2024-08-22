@@ -2,7 +2,7 @@
   padding: 69px 42px 70px 43px;
   width: 463px;
   height: 245px;
-  background-color: #fff;
+  background-color: inherit;
   font-family: Inter;
   border-radius: 25px;
   position: absolute;
@@ -35,7 +35,7 @@
     font-weight: 400;
     font-size: 20px;
     text-align: center;
-    color: $color-footerTextNav;
+    color: inherit;
   }
 }
 

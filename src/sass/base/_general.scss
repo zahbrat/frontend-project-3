@@ -24,7 +24,7 @@ ul {
   }
   
   .container{
-    background-color: #fff;
+    background-color: inherit;
     width: 75.69%;
         padding: 0 91px;
         margin: 0 auto;
@@ -83,7 +83,8 @@ a {
   max-width: 1090px;
   width: 100%;
   margin: 0 auto;
-  background-color: $color-footer;
+  background-color: inherit;
+
 }
 
 ::selection {

@@ -2,7 +2,7 @@
     &__title {
       font-weight: 400;
       font-size: 16px;
-      color: $color-footerTextNav;
+      color:inherit;
       text-align: center;
       padding: 0 0 36px 0;
       margin: 0;
@@ -47,11 +47,11 @@
     &__text {
       font-weight: 400;
       font-size: 12px;
-      color: $color-footerTextNav;
+      color: inherit;
     }
     &__hr{
-      background-color: $color-footerTextNav;
-      height: 2px;
+      background-color: inherit;
+      height: 1px;
       width: 536px;
     }
     &__choice{

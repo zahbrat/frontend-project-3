@@ -1,4 +1,5 @@
 @import './base/fonts';
+@import './base/normalize';
 @import './utils/colors';
 @import './common';
 @import './sections/header';
@@ -12,3 +13,7 @@
 @import './components/max_num';
 @import './components/canculator';
 @import 'base/general.scss';
+@import './components/dino';
+@import './components/scientists';
+@import './components/football';
+@import './components/our-team';

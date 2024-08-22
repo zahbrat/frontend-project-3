@@ -1,50 +1,56 @@
 body {
-    font-family: 'Montserrat Alternates';
-    background-image: url(../images/bacground-main.png);
-    background-size: cover;
-    background-repeat: repeat-y;
-    margin: 0 3px;
-    // background-color: $beige;
+  font-family: 'Montserrat Alternates';
+  background-image: url(../images/bacground-main.png);
+  background-size: cover;
+  background-repeat: repeat-y;
+  margin: 0 3px;
+  background-color: $beige;
 }
 
 ul {
-    padding: 0;
-    list-style: none;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  input {
-    outline: none;
-  }
-  
-  li {
-    list-style-type: none;
-  }
-  
-  .container{
-    background-color: #fff;
-    width: 75.69%;
-        padding: 0 91px;
-        margin: 0 auto;
-    
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  
-ul {
-    padding: 0;
-    list-style: none;
-  }
-  
-  input {
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input {
   outline: none;
 }
 
+li {
+  list-style-type: none;
+}
+
+.container {
+  background-color: #fff;
+  width: 75.69%;
+  padding: 0 91px;
+  margin: 0 auto;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+main {
+  background-color: #fff;
+  max-width: 1090px;
+  margin: 0 auto;
+}
 
 
 body {
@@ -77,7 +83,7 @@ li {
 a {
   text-decoration: none;
 }
- 
+
 
 .container {
   max-width: 1090px;
@@ -90,18 +96,20 @@ a {
   background-color: $color-footerHover;
 }
 
-p{
+p {
   margin: 2;
 }
 
 
 input {
   outline: none;
+
   &:focus {
     outline: none;
     box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.25);
     // border: 1px solid #ccc         ;
   }
+
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -109,8 +117,12 @@ input {
 }
 
 section {
+
+
   padding: 36px 0;
 }
-h1, h2 {
+
+h1,
+h2 {
   margin: 0;
 }

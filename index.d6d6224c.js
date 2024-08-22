@@ -1,0 +1,2 @@
+!function(){var t,e;t=document.querySelector(".football__stage"),e=t.querySelector(".football__ball"),t.addEventListener("click",(function(n){n.preventDefault();var l=t.getBoundingClientRect(),o=n.clientX-l.left-25,a=n.clientY-l.top-25;e.style.left="".concat(o,"px"),e.style.top="".concat(a,"px")})),e.addEventListener("transitionstart",(function(){e.classList.add("football__ball-move")})),e.addEventListener("transitionend",(function(){e.classList.remove("football__ball-move")}))}();
+//# sourceMappingURL=index.d6d6224c.js.map

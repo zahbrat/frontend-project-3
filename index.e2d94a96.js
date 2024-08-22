@@ -1,0 +1,2 @@
+(()=>{const t=document.querySelector(".football__stage"),e=t.querySelector(".football__ball");t.addEventListener("click",(l=>{l.preventDefault();const o=t.getBoundingClientRect();let n=l.clientX-o.left-25,a=l.clientY-o.top-25;e.style.left=`${n}px`,e.style.top=`${a}px`})),e.addEventListener("transitionstart",(()=>{e.classList.add("football__ball-move")})),e.addEventListener("transitionend",(()=>{e.classList.remove("football__ball-move")}))})();
+//# sourceMappingURL=index.e2d94a96.js.map

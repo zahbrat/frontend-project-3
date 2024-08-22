@@ -17,9 +17,9 @@ input {
 }
 
 img {
-  display: block;
+  // display: block;
   max-width: 100%;
-  height: auto;
+  // height: auto;
 }
 
 li {
@@ -40,6 +40,10 @@ a {
 
 ::selection {
   background-color: $color-footerHover;
+}
+
+p{
+  margin: 2;
 }
 
 

@@ -32,14 +32,17 @@ const ourteam = () => {
   });
 
   document.addEventListener('keydown', e => {
-    e.preventDefault();
     const slides = slider.querySelectorAll('.ourteam__part');
 
     if (e.code === 'ArrowLeft') {
+      e.preventDefault();
+
       currentSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
     }
 
     if (e.code === 'ArrowRight') {
+      e.preventDefault();
+
       currentSlide = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
     }
 

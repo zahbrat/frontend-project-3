@@ -49,6 +49,9 @@
       right: 40px;
       height: 35px;
       top: 5px;
+      &:hover {
+        background-color: $color-footerHover;
+      }
     }
   }
 

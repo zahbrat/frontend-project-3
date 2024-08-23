@@ -4,6 +4,7 @@
     height: 2px;
     width: 536px;
   }
+
   &__title {
     font-weight: 400;
     font-size: 16px;
@@ -26,6 +27,7 @@
     font-size: 12px;
     color: $color-footerInputText;
   }
+
   &__btn {
     border-radius: 0 20px 20px 0;
     background-color: $color-footerTextNav;
@@ -36,6 +38,7 @@
     margin: 0;
     top: 2px;
   }
+
   &__box {
     display: flex;
     justify-content: space-evenly;
@@ -43,8 +46,10 @@
 
     &--result {
       display: flex;
+      width: 320px;
     }
   }
+
   &__result {
     font-weight: 400;
     font-size: 12px;

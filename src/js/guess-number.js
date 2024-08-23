@@ -1,4 +1,4 @@
-const text = document.getElementById('result');
+const text = document.getElementById('resultNum');
 
 const guessNumber = function () {
   const numberToGuess = Math.floor(Math.random() * 10) + 1;

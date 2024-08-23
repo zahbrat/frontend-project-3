@@ -1,4 +1,4 @@
-const text = document.getElementById('result');
+const text = document.getElementById('resultYear');
 const checkYear = function () {
   const year = document.getElementById('year').value;
 

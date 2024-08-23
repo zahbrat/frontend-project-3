@@ -68,15 +68,16 @@
     }
 
 }
-.check-year{
-    &__subtitle{
-      @extend %text;
-   text-align: center;
-   padding: 26px 0 36px 0;
-   margin: 0;
+
+.check-year {
+    &__subtitle {
+        @extend %text;
+        text-align: center;
+        padding: 26px 0 36px 0;
+        margin: 0;
     }
 
-    &__title{
+    &__title {
         font-weight: 400;
         font-size: 24px;
         color: $black;
@@ -84,7 +85,8 @@
         padding: 36px 0 26px 0;
         margin: 0;
     }
-    &__input{
+
+    &__input {
         width: 215px;
         height: 35px;
         background-color: $input-gray;
@@ -94,37 +96,43 @@
         outline: none;
         border: none;
     }
-    &__btn{
+
+    &__btn {
         border-radius: 0 20px 20px 0;
         background-color: $black;
         height: 35px;
         cursor: pointer;
         position: relative;
         left: -33px;
-margin: 0;
+        margin: 0;
     }
-    &__box{
-    display: flex;
-    justify-content: space-evenly;
 
-    &--result{
+    &__box {
         display: flex;
+        justify-content: space-evenly;
 
+        &--result {
+            display: flex;
+
+        }
     }
-}
-      &__hr{
+
+    &__hr {
         height: 2px;
         width: 536px;
         background-color: $black;
     }
-    &__result{
+
+    &__result {
         font-weight: 400;
-font-size: 12px;
-text-align: right;
-color: #039900;
+        font-size: 12px;
+        text-align: right;
+        color: #039900;
+        width: 230px;
     }
-    &__wrapper{
+
+    &__wrapper {
         margin: 0;
     }
-   
+
 }

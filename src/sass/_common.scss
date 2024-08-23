@@ -1,0 +1,17 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.container {
+  max-width: 1090px;
+  margin: 0 auto;
+  width: 100%; 
+}
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button {
+  cursor: pointer;
+}

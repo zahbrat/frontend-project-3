@@ -1,12 +1,12 @@
 const modal = document.querySelector('[data-model]')
 const modalOpen = document.querySelector('[data-open-modal]')
 const modalClose = document.querySelector('[data-modal-close]')
-const backdrop = document.querySelector('.backdrop')
+const backdrop = document.querySelector('.backdrop-footer')
 const input = document.querySelector('.footer__input')
 
 
 const toogleModal = () => {
-    modal.classList.toggle('is-hidden')
+    backdrop.classList.toggle('is-hidden')
 }
 
 modalOpen.addEventListener('click', () => {

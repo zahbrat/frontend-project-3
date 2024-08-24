@@ -1,0 +1,2 @@
+const e=document.getElementById("resultYear");document.querySelector(".check-year__btn").addEventListener("click",(function(){const t=document.getElementById("year").value;if(isNaN(t)||""===t.trim()||t<=0)return e.textContent="Будь ласка, введіть правильний рік!",void(e.style.color="#8ACECF");console.log(t);let o="";t%4==0&&t%100!=0||t%400==0?(o="Ви народилися у високосний рік!",e.style.color="#039900"):(o="Ви народилися не у високосний рік!",e.style.color="red"),e.textContent=o}));
+//# sourceMappingURL=index.060b0b2d.js.map

@@ -1,0 +1,2 @@
+!function(){var e=document.getElementById("resultYear");document.querySelector(".check-year__btn").addEventListener("click",(function(){var t=document.getElementById("year").value;if(isNaN(t)||""===t.trim()||t<=0)return e.textContent="Будь ласка, введіть правильний рік!",void(e.style.color="#8ACECF");console.log(t);var n="";t%4==0&&t%100!=0||t%400==0?(n="Ви народилися у високосний рік!",e.style.color="#039900"):(n="Ви народилися не у високосний рік!",e.style.color="red"),e.textContent=n}))}();
+//# sourceMappingURL=index.ae9cffd6.js.map

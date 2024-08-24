@@ -1,0 +1,2 @@
+!function(){var t=document.querySelector(".time__wrapper--input"),e=document.querySelector(".time__wrapper--btn"),o=document.querySelector(".time__days--info");console.log(t,e,o);e.addEventListener("click",(function(){console.log("click");var e=+t.value;if("number"!=typeof e||!Number.isInteger(e)||e<0)return"Помилка, перевірте дані";var r=Math.floor(e/1440);e%=1440;var n=Math.floor(e/60),c=(e%=60)%60;o.textContent="".concat(r," дн ").concat(n.toString().padStart(2,"0"),":").concat(c.toString().padStart(2,"0"))}))}();
+//# sourceMappingURL=index.12dc3138.js.map

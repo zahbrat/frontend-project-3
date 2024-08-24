@@ -1,0 +1,2 @@
+const t=document.querySelector(".time__wrapper--input"),e=document.querySelector(".time__wrapper--btn"),o=document.querySelector(".time__days--info");console.log(t,e,o);e.addEventListener("click",(function(){console.log("click");let e=+t.value;if("number"!=typeof e||!Number.isInteger(e)||e<0)return"Помилка, перевірте дані";let r=Math.floor(e/1440);e%=1440;let n=Math.floor(e/60);e%=60;let l=e%60;o.textContent=`${r} дн ${n.toString().padStart(2,"0")}:${l.toString().padStart(2,"0")}`}));
+//# sourceMappingURL=index.c0bb4c91.js.map

@@ -1,4 +1,4 @@
-const modalCloseHeaderHeader = document.querySelector('.modal-header__close')
+const modalCloseHeader = document.querySelector('.modal-header__close')
 const backdropHeader = document.querySelector('.backdrop-header')
 const headerGreet = document.querySelector('.header__greeting')
 const modalInput = document.querySelector('.modal-header__input')
